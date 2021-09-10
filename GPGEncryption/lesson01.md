@@ -12,6 +12,11 @@ installing [Gpg4win][ref102]. On macOS,
 [here's a YouTube tutorial][ref103] for installing [GPGTools][ref104].
 If you have a Chromebook, I believe it's built in.
 
+[ref101]: https://www.youtube.com/watch?v=QmE4LrBSChQ
+[ref102]: https://www.gpg4win.org/
+[ref103]: https://www.youtube.com/watch?v=JK2q-kYCg1Y
+[ref104]: https://www.gpgtools.org/
+
 Follow the instructions in the tutorials for creating your first set of
 public and secret keys.
 
@@ -124,9 +129,4 @@ using the name of the file. Once decrypted, you'll find a URL for the
 second lesson. That one will give you my public key and teach you how
 to encrypt a message back to me.
 
-
-[ref101]: https://www.youtube.com/watch?v=QmE4LrBSChQ
-[ref102]: https://www.gpg4win.org/
-[ref103]: https://www.youtube.com/watch?v=JK2q-kYCg1Y
-[ref104]: https://www.gpgtools.org/
 
