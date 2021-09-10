@@ -12,11 +12,6 @@ installing [Gpg4win][ref102]. On macOS,
 [here's a YouTube tutorial][ref103] for installing [GPGTools][ref104].
 If you have a Chromebook, I believe it's built in.
 
-[ref101]: https://www.youtube.com/watch?v=QmE4LrBSChQ
-[ref102]: https://www.gpg4win.org/
-[ref103]: https://www.youtube.com/watch?v=JK2q-kYCg1Y
-[ref104]: https://www.gpgtools.org/
-
 Follow the instructions in the tutorials for creating your first set of
 public and secret keys.
 
@@ -105,6 +100,7 @@ $ gpg --export -a 405B9143E2DB2F9024DDD379889E4B6B0D39F32B
 
 (Lots of not-actually-random characters in lines 64 characters long.)
 -----END PGP PUBLIC KEY BLOCK-----
+```
 
 Email that entire block of text, including the complete BEGIN and END
 lines, to me. I will use your public key to encrypt the location of the
@@ -129,4 +125,8 @@ using the name of the file. Once decrypted, you'll find a URL for the
 second lesson. That one will give you my public key and teach you how
 to encrypt a message back to me.
 
+[ref101]: https://www.youtube.com/watch?v=QmE4LrBSChQ
+[ref102]: https://www.gpg4win.org/
+[ref103]: https://www.youtube.com/watch?v=JK2q-kYCg1Y
+[ref104]: https://www.gpgtools.org/
 
