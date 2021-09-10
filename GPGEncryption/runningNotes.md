@@ -1,3 +1,46 @@
+# Running Notes
+
+- *Lesson01*
+    - Download the software, create a short term key, send the ascii-
+    armored public key to me. This is a short term key.
+    - *Don't* upload the key anywhere.
+    - *Don't* create a copy.
+    - How to decrypt the pointer to lesson02.
+
+- *Lesson02* Prep
+    - Create a custom key pair for the interaction.
+    - Include it with the lesson.
+- *Lesson02*
+    - Create a text file.
+    - Encrypt the text file with the instructor's public key.
+    - Post the ascii-armored text to a gDoc.
+    - Share the gDoc with dafydd2277@gmail.com as Editor.
+
+- *Lesson03* Prep
+    - Encrypt instructions to delete the first key, create a proper
+    email key, and send me the proper key. Paste that into the gDoc.
+
+- *Lesson03*
+    - Discuss the value of strong passwords, and the utility of
+    password managers.
+    - Student creates a regular email encryption key, and sends it to
+    me.
+
+- *Lesson04* Prep
+    - Sign and return the key.
+    - Encrypt the signed key and lesson04 instructions, and send email
+    back.
+
+- *Lesson04*
+    - Upload the signed key to https://keys.openpgp.org/.
+    - Look at https://www.openpgp.org/software/ for instructions on
+    incorporating your email key into your email client.
+
+    - Put a smaller tidier version of these notes in a different gDoc.
+    - Encrypt the URL to that gDoc. Paste the ascii-armored encrypted
+    text
+
+
 # One Example For Secure Communications
 
 > This was my original brain dump for what I wanted to do here, before

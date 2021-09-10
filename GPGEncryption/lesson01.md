@@ -10,123 +10,64 @@ reply back to the student.
 If you're on Windows, [here's a YouTube tutorial][ref101] for
 installing [Gpg4win][ref102]. On macOS,
 [here's a YouTube tutorial][ref103] for installing [GPGTools][ref104].
-If you have a Chromebook, I believe it's built in.
-
-Follow the instructions in the tutorials for creating your first set of
-public and secret keys.
-
-- Use the default key type (`RSA and RSA`)
-- Take the default key size of 2048 bits.
-- Set the key expiration to 1 week.
-- Use any name you want, your real email address, and a comment of
-"Lesson 1 key."
-- Use any simple password that works for you. In a future lesson, we'll
-discuss strong passwords. You won't this particular key for very long.
-
-Your command should look something like this when you're done. (Note
-that the dollar sign at the beginning of a line is a command prompt.
-Don't type it in.)
-
-```
-$ gpg --full-generate-key
-gpg (GnuPG) 2.2.20; Copyright (C) 2020 Free Software Foundation, Inc.
-This is free software: you are free to change and redistribute it.
-There is NO WARRANTY, to the extent permitted by law.
-
-Please select what kind of key you want:
-   (1) RSA and RSA (default)
-   (2) DSA and Elgamal
-   (3) DSA (sign only)
-   (4) RSA (sign only)
-  (14) Existing key from card
-Your selection? 1
-RSA keys may be between 1024 and 4096 bits long.
-What keysize do you want? (2048)
-Requested keysize is 2048 bits
-Please specify how long the key should be valid.
-         0 = key does not expire
-      <n>  = key expires in n days
-      <n>w = key expires in n weeks
-      <n>m = key expires in n months
-      <n>y = key expires in n years
-Key is valid for? (0) 1w
-Key expires at Thu 16 Sep 2021 08:15:18 PM PDT
-Is this correct? (y/N) y
-
-GnuPG needs to construct a user ID to identify your key.
-
-Real name: David Barr
-Email address: dafydd@dafydd.com
-Comment: Lesson 1 Key
-You selected this USER-ID:
-    "David Barr (Lesson 1 Key) <dafydd@dafydd.com>"
-
-Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit? O
-We need to generate a lot of random bytes. It is a good idea to perform
-some other action (type on the keyboard, move the mouse, utilize the
-disks) during the prime generation; this gives the random number
-generator a better chance to gain enough entropy.
-We need to generate a lot of random bytes. It is a good idea to perform
-some other action (type on the keyboard, move the mouse, utilize the
-disks) during the prime generation; this gives the random number
-generator a better chance to gain enough entropy.
-gpg: key 889E4B6B0D39F32B marked as ultimately trusted
-gpg: revocation certificate stored as '/home/dafydd/.gnupg/openpgp-revocs.d/405B9143E2DB2F9024DDD379889E4B6B0D39F32B.rev'
-public and secret key created and signed.
-
-pub   rsa2048 2021-09-10 [SC] [expires: 2021-09-17]
-      405B9143E2DB2F9024DDD379889E4B6B0D39F32B
-uid                      David Barr (Lesson 1 Key) <dafydd@dafydd.com>
-sub   rsa2048 2021-09-10 [E] [expires: 2021-09-17]
-```
-
-
-Now, you should be able to list your keys. Try these two commands.
-
-```
-$ gpg --list-keys
-
-$ gpg --list-secret-keys
-```
-
-
-Your computer should have printed a list of your keys. You should have
-one public and one secret key. Now, you're going to export the public
-key.
-
-```
-$ gpg --export -a 405B9143E2DB2F9024DDD379889E4B6B0D39F32B
------BEGIN PGP PUBLIC KEY BLOCK-----
-
-(Lots of not-actually-random characters in lines 64 characters long.)
------END PGP PUBLIC KEY BLOCK-----
-```
-
-Email that entire block of text, including the complete BEGIN and END
-lines, to me. I will use your public key to encrypt the location of the
-second lesson and email it back to you. When you get the encrypted
-message, it will look something like this:
-
-```
------BEGIN PGP MESSAGE-----
-
-(Lots of not-actually-random characters in lines 64 characters long.)
------END PGP MESSAGE-----
-```
-
-Copy all of that text, including the complete `BEGIN` and `END` lines,
-into a text file. Then, execute
-
-```
-$ gpg -d <file>
-```
-
-using the name of the file. Once decrypted, you'll find a URL for the
-second lesson. That one will give you my public key and teach you how
-to encrypt a message back to me.
+If you have a Chromebook, I believe it's built in. The macOS tutorial
+isn't very good. Maybe, one day, I'll buy a web cam and do a better
+one.
 
 [ref101]: https://www.youtube.com/watch?v=QmE4LrBSChQ
 [ref102]: https://www.gpg4win.org/
 [ref103]: https://www.youtube.com/watch?v=JK2q-kYCg1Y
 [ref104]: https://www.gpgtools.org/
+
+Follow the instructions in the tutorials for creating your first set of
+public and secret keys. Open up the `Advanced Options...` for some of
+these settings.
+
+- Use the default key type (`RSA and RSA`)
+- Take the default key size of 2048 bits.
+- Set the key expiration to 1 week.
+- For Name, use "Lesson 1 key."
+- For Email, use your real address.
+- For the Comment, use "Lesson 1 key."
+- Use any simple password that works for you. In a future lesson, we'll
+discuss strong passwords. You won't be using this particular key for
+very long.
+
+Now, `Export...` your public key using the Ascii armor option, and copy
+the entire key, from the first dash in the first `BEGIN` line to the
+last dash in the `END` line. Paste that into an email and send it to
+me at <dafydd@dafydd.com>.
+
+A note before I continue: from a security standpoint, Graphical User
+Interfaces suck. You have no idea what's going on "under the covers."
+"Command Line Interfaces," like the Windows Command Prompt application,
+are somewhat better. So, all future lessons are going to be working
+from the command line, or CLI. This reduces, but won't eliminate, the
+number of ways your security can be compromised.
+
+With that out of the way, once I have your first public key, I'm going
+to create a [public/private key-pair of my own][ref105] that's just
+for us. I will use your public key to encrypt my public key and the
+instructions for lesson 2.
+
+[ref105]: https://en.wikipedia.org/wiki/Public-key_cryptography
+
+When you get the encrypted message, copy it out of your email and
+paste it into a text file called `lesson02.asc`. Then, from your
+command line interface, try this:
+
+```
+gpg -d lesson02.asc
+```
+
+You should be asked for the password for your key. Once you enter that,
+you should get the unencrypted text out to your command window. To send
+the text to a file, try this:
+
+```
+gpg -d lesson02.asc > lesson02.txt
+```
+
+That should create a text file with the instructions for the second
+lesson, along with my public key.
 
