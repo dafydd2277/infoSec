@@ -10,9 +10,10 @@ reply back to the student.
 If you're on Windows, [here's a YouTube tutorial][ref101] for
 installing [Gpg4win][ref102]. On macOS,
 [here's a YouTube tutorial][ref103] for installing [GPGTools][ref104].
-If you have a Chromebook, I believe it's built in. The macOS tutorial
+If you have a Chromebook, I believe `gpg` is built in. The macOS tutorial
 isn't very good. Maybe, one day, I'll buy a web cam and do a better
-one.
+one. In any case, the command line commands from the Windows tutorial
+will transfer over, once we get to that point.
 
 [ref101]: https://www.youtube.com/watch?v=QmE4LrBSChQ
 [ref102]: https://www.gpg4win.org/
@@ -52,7 +53,8 @@ instructions for lesson 2.
 
 [ref105]: https://en.wikipedia.org/wiki/Public-key_cryptography
 
-When you get the encrypted message, copy it out of your email and
+When you get the encrypted message, copy it out of your email, from the
+first dash of the `BEGIN` line to the last dash of the `END` line, and
 paste it into a text file called `lesson02.asc`. Then, from your
 command line interface, try this:
 
@@ -61,8 +63,8 @@ gpg -d lesson02.asc
 ```
 
 You should be asked for the password for your key. Once you enter that,
-you should get the unencrypted text out to your command window. To send
-the text to a file, try this:
+you should get the unencrypted text printed out to your command window.
+To send the text to a file, try this:
 
 ```
 gpg -d lesson02.asc > lesson02.txt

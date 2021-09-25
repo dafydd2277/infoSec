@@ -2,14 +2,15 @@
 
 - *Lesson01*
     - Download the software, create a short term key, send the ascii-
-    armored public key to me. This is a short term key.
-    - *Don't* upload the key anywhere.
-    - *Don't* create a copy.
-    - How to decrypt the pointer to lesson02.
+    armored public key to me.
+        - *Don't* upload the key anywhere.
+        - *Don't* create a copy.
+        - How to decrypt the pointer to lesson02.
 
 - *Lesson02* Prep
     - Create a custom key pair for the interaction.
     - Include it with the lesson.
+
 - *Lesson02*
     - Create a text file.
     - Encrypt the text file with the instructor's public key.
@@ -24,7 +25,7 @@
     - Discuss the value of strong passwords, and the utility of
     password managers.
     - Student creates a regular email encryption key, and sends it to
-    me.
+    me. Use a short expiration. Comment that it's a test email key.
 
 - *Lesson04* Prep
     - Sign and return the key.
@@ -35,10 +36,44 @@
     - Upload the signed key to https://keys.openpgp.org/.
     - Look at https://www.openpgp.org/software/ for instructions on
     incorporating your email key into your email client.
+    - Encrypt and send me the URL to your key.
 
-    - Put a smaller tidier version of these notes in a different gDoc.
-    - Encrypt the URL to that gDoc. Paste the ascii-armored encrypted
-    text
+- *Lesson05* Prep
+    - Put the Lesson 05 text in Dropbox. Encrypt and return the URL.
+
+- *Lesson05*
+    - Discover that your key has been compromised. Revoke it, and
+    upload the revocation to https://keys.openpgp.org/.
+    - Try to download the key again.
+    - Create a new key, with all the proper information and a comment
+    of "Email key" Upload that, and email me the URL.
+
+- *Lesson06* Prep
+    - Put Lesson06 in a Pastebin file, with a burn after reading
+    setting. Encrypt and email the URL.
+
+- *Lesson06*
+    - Get my email key from https://keys.openpgp.net/. Encrypt a file
+    using that key and the command line. Email it to me.
+
+- *Lesson07* Prep
+    - Put the text of Lesson07 in a gDoc.
+    - Put an encrypted meme image in a Pastebin file. Include the link
+    in the gDoc.
+    - Encrypt the URL to the gDoc.
+
+- *Lesson07*
+    - Discuss the value of simplicity, text files, and Markdown.
+    Discuss the risks of encrypting Word Docs, PDFs, etc.
+    - Discuss how we've been using email, gDocs, pastebin, and
+    Dropbox the spread files around.
+    - Discuss how diligence and randomness help with security.
+    - Discuss using canary phrases.
+        - Don't ever write them down when you don't mean them.
+        Discuss the canary phrase for your project in person. Then,
+        if it gets used in text, you know your part has been
+        compromised.
+
 
 
 # One Example For Secure Communications
